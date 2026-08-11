@@ -1,0 +1,37 @@
+┌──────────────────────────┐
+│        React Apps        │
+│ ─ Web (Admin Panels)     │
+│ ─ Mobile App (Workers)   │
+└───────────┬──────────────┘
+            │ HTTPS
+┌───────────▼──────────────┐
+│      API Gateway         │
+│  (REST + WebSocket)      │
+└───────────┬──────────────┘
+            │
+┌─────────────────────────────────────────────┐
+│        Serverless Microservices (NestJS)    │
+│   (AWS Lambda + Serverless Framework)       │
+│                                             │
+│  • Auth & User Service                      │
+│  • Company & ProjectSite Service            │
+│  • Hazard & Risk Logging Service             │
+│  • Equipment Request Service                │
+│  • Admin Review & Compliance Service        │
+│                                             │
+└───────────┬─────────────────────────────────┘
+            │
+┌─────────────────────────────────────────────┐
+│             Data Layer                       │
+│  • MongoDB Atlas (Users, Sites, Logs)       │
+│  • DynamoDB (Sessions / QR mapping)         │
+│  • S3 (Images, Evidence, QR codes)          │
+└───────────┬─────────────────────────────────┘
+            │
+┌─────────────────────────────────────────────┐
+│          AWS Supporting Services             │
+│  • Cognito (Auth & Roles)                   │
+│  • SES (Credentials Email)                  │
+│  • SNS / EventBridge (Events)               │
+│  • CloudWatch (Logs & Monitoring)           │
+└─────────────────────────────────────────────┘
