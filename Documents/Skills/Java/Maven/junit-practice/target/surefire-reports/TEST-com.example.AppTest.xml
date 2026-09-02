@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.AppTest" time="0.058" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\KaleeswarakumarM\Documents\Skills\Java\Maven\junit-practice\target\test-classes;C:\Users\KaleeswarakumarM\Documents\Skills\Java\Maven\junit-practice\target\classes;C:\Users\KaleeswarakumarM\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\KaleeswarakumarM\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.4\bin"/>
+    <property name="sun.java.command" value="C:\Users\KaleeswarakumarM\AppData\Local\Temp\surefire14776883384689125007\surefirebooter-20260825191432682_3.jar C:\Users\KaleeswarakumarM\AppData\Local\Temp\surefire14776883384689125007 2026-08-25T19-14-32_603-jvmRun1 surefire-20260825191432682_1tmp surefire_0-20260825191432682_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\KaleeswarakumarM\Documents\Skills\Java\Maven\junit-practice\target\test-classes;C:\Users\KaleeswarakumarM\Documents\Skills\Java\Maven\junit-practice\target\classes;C:\Users\KaleeswarakumarM\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\KaleeswarakumarM\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\KaleeswarakumarM"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-07-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25.0.4"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\KaleeswarakumarM\Documents\Skills\Java\Maven\junit-practice"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\KaleeswarakumarM\AppData\Local\Temp\surefire14776883384689125007\surefirebooter-20260825191432682_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.4+7-LTS-189"/>
+    <property name="user.name" value="KaleeswarakumarM"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\KaleeswarakumarM\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\KALEES~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.4"/>
+    <property name="user.dir" value="C:\Users\KaleeswarakumarM\Documents\Skills\Java\Maven\junit-practice"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25.0.4\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\KaleeswarakumarM\AppData\Roaming\npm;C:\Users\KaleeswarakumarM\AppData\Local\nvm;C:\nvm4w\nodejs;C:\windows\system32\config\systemprofile\.local\bin;C:\Users\KaleeswarakumarM\Downloads\apache-maven-3.9.16-bin\apache-maven-3.9.16\bin;C:\Users\KaleeswarakumarM\Downloads\gradle-9.7.1-bin\gradle-9.7.1\bin;C:\Users\KaleeswarakumarM\Downloads\terraform_1.15.9_windows_amd64;C:\Users\KaleeswarakumarM\.local\bin;C:\Users\KaleeswarakumarM\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\bin;C:\Users\KaleeswarakumarM\AppData\Local\nvm;C:\nvm4w\nodejs;C:\Users\KaleeswarakumarM\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\KaleeswarakumarM\AppData\Local\Programs\DockerDesktop\resources\bin;c:\Users\KaleeswarakumarM\.vscode\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.4+7-LTS-189"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="Testing2" classname="com.example.AppTest" time="0.002">
+    <system-out><![CDATA[Before all
+Constructor invoked
+Init
+After
+]]></system-out>
+  </testcase>
+  <testcase name="Testing" classname="com.example.AppTest" time="0.001">
+    <system-out><![CDATA[Constructor invoked
+Init
+After
+]]></system-out>
+  </testcase>
+</testsuite>

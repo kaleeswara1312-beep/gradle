@@ -1,0 +1,9 @@
+junit is one of the testing framework to help the unit testing for the functionalities.
+junit4 is using by existing project.
+junit5 is know as junit jupiter which enhances the modern features comparing with junit4.
+if the project is using the junit4 and you dont want to update the complete testing code to junit5 but want to utilize the junit5 features, the library is providing the features via vintage API.
+
+testcase lifecycle such as Test, BeforeEach, aftereach, beforeall and afterall.
+Beforeall and afterall will be tagged to the class because we need to mention the method as static.
+
+Basically, when we create the multiple methods inside the class, the Test will create multiple instance per method and its defualt behaviour of Test by using TestInstance.permethod. But if we want to create only one instance for the instance we can use it usnig TestInstance.perclass annottation and it's avaiallbe only in Junit5.

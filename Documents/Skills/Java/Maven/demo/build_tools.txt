@@ -1,0 +1,187 @@
+maven:
+basically it's build tool and helps to automate the process like creating the testcase, sourcecode conversion, source code to library/package as JAR/WAR file and then it can allow us to download/manage the dependencies into the project.
+
+maven project creation command: mvn archetype:generate -DgroupId=kali -DartifactId=demo -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+archtype is a template which will help to create a simple project without creating the project manually.
+-DarchetypeArtifactId=maven-archetype-quickstart(Use the Quickstart template).
+-DarchetypeArtifactId=maven-archetype-webapp(Use for webapp).
+mvn archetype:generate(helps to generate a simple project)
+        │
+        ├── -DgroupId=com.kali
+        │       └── Define groupId = com.kali(under which group we're creating the project)
+        │
+        ├── -DartifactId=my-app
+        │       └── Define artifactId = my-app(app name)
+        │
+        ├── -Dversion=1.0-SNAPSHOT
+        │       └── Define version = 1.0-SNAPSHOT(app version)
+        │
+        └── -DinteractiveMode=false
+                └── Define interactiveMode = false(make the terminal non-interactive mode)
+
+version:
+SNAPSHOT and release
+SNAPSHOT means the code under the development and it's not ready for production.
+release means the code ready for the production.
+
+maven dependencies - it's manage the dependencies for the project.
+maven goals - it's set of steps to process such as compile, run, test, package and deploy.
+maven repositories - the area to storage the library/pacakge in central or remote or local.
+
+jar - standalone project and it'll converted to jar.
+war - web application project and it'll converted to war.
+
+repositories:
+central - it'll public and anyone can download it from the internet.
+remote - it'll private for their own project or org and can be managed through the nexus or someother tools.
+local - it'll be local for the project.
+
+Pom -project object model and it'be more config file for the project and it can be useful to communicate with the maven.
+
+effectivepom has been default file maintained the configuration for the whole projects. But if we want to configure for the particular project, we need to use the pom.xml file.
+
+
+maven lifecycle:
+                 MAVEN
+                   │
+        ┌──────────┼──────────┐
+        ↓          ↓          ↓
+      Clean      Default     Site
+                   │
+                   ↓
+        validate → compile
+                   ↓
+                  test
+                   ↓
+                package
+                   ↓
+                verify
+                   ↓
+                install
+                   ↓
+                 deploy
+
+clean - will remove the target or build folder.
+default - will follow the commands to intergrate with the project.
+site - will help to document the project.
+--------------------------------------------------------------------------------------------------
+Gradle:
+Gradle is one of the build tools for the application as like maven. But, it can support multiple languages and also once we create a project with the help of gradle build tool. We dont need to install on any machine because of the gradle wrapper in the current project.
+
+config - build.gradle(groovy or kotlin)==pom.xml(maven)
+gradle wrapper - once its configured in the current project, we dont need to install anywhere because it can use the gradle script to make it available there.
+
+
+## Node.js vs Maven vs Gradle
+
+| Purpose                       | Node.js / npm   | Maven                  | Gradle                       |
+| ----------------------------- | --------------- | ---------------------- | ---------------------------- |
+| Install/download dependencies | `npm install`   | Automatic during build | Automatic during build       |
+| Build project                 | `npm run build` | `mvn package`          | `gradle build`               |
+| Run tests                     | `npm test`      | `mvn test`             | `gradle test`                |
+| Run Spring Boot app           | `npm start`     | `mvn spring-boot:run`  | `gradle bootRun`             |
+| Clean build files             | —               | `mvn clean`            | `gradle clean`               |
+| Build + test + package        | `npm run build` | `mvn package`          | `gradle build`               |
+| Install artifact locally      | —               | `mvn install`          | `gradle publishToMavenLocal` |
+
+### Maven
+
+**Build:**
+
+```bash
+mvn package
+```
+
+Typical flow:
+
+```text
+Compile
+   ↓
+Test
+   ↓
+Package
+   ↓
+JAR/WAR
+```
+
+**Run tests:**
+
+```bash
+mvn test
+```
+
+**Clean:**
+
+```bash
+mvn clean
+```
+
+**Install the generated artifact into the local Maven repository:**
+
+```bash
+mvn install
+```
+
+Important: `mvn install` is **not the same as `npm install`**. Maven's `install` means building the project and placing the generated artifact into:
+
+```text
+~/.m2/repository
+```
+
+### Gradle
+
+**Build:**
+
+```bash
+gradle build
+```
+
+Typical flow:
+
+```text
+Compile
+   ↓
+Test
+   ↓
+Package
+   ↓
+JAR
+```
+
+The output is usually under:
+
+```text
+build/
+└
+```
+
+
+Basically if we want to run the app noramlly in gradle or maven, frist we need to package the app with the help of mvn package or gradle build. But, when you run this command java -jar app.jar, it won't execute because we need to configure the manifest plugin in the pom or build.gradle config file. The issue is that it doesn't know the app starting point, so we need to mention the starting file of the app.
+
+| Purpose                | Maven              | Gradle                   |
+| ---------------------- | ------------------ | ------------------------ |
+| Compile main Java code | `mvn compile`      | `gradle compileJava`     |
+| Compile test code      | `mvn test-compile` | `gradle compileTestJava` |
+| Run tests              | `mvn test`         | `gradle test`            |
+| Package JAR            | `mvn package`      | `gradle jar`             |
+| Full build             | `mvn package`      | `gradle build`           |
+| Clean                  | `mvn clean`        | `gradle clean`           |
+
+
+For an interview perspective, you can keep these 4 points in mind:
+
+Maven is more mature and widely adopted
+Maven has been around longer and is very common in enterprise Java/Spring Boot projects. Many existing Java applications use Maven with pom.xml.
+Gradle is more flexible and generally faster
+Gradle uses a task-based build system, supports incremental builds and build caching, and allows configuration using Groovy or Kotlin DSL. This can make complex builds more efficient.
+Maven is easier to understand initially
+Maven follows a predefined lifecycle such as compile → test → package → install. Gradle is more flexible but requires understanding its tasks, plugins, and dependency configuration.
+
+Choose based on project requirements
+Don't say "Gradle is better than Maven" in an interview. A better answer is:
+
+"Maven is a good choice for standardized enterprise Java projects, while Gradle is preferable when build flexibility, customization, and build performance are important. Both are widely used, and the choice often depends on the project's existing ecosystem."
+
+Maven will support only java, but gradle will help for some other languages as well.
+
